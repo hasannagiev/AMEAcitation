@@ -1,0 +1,16 @@
+{% extends 'index_main/wrapper.html' %}
+{% block title %}Xəbər Əlavə Et {% endblock %}
+{% block content %}
+<div class="features">
+    <h1>Xəbərlərin əlavə olunması</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.title }}<br>
+        {{ form.anons }}<br>
+        {{ form.full_text }}<br>
+        {{ form.date }}<br>
+        <span>{{ error }}</span>
+        <button class="btn btn-success" type="submit"> Saxla </button>
+    </form>
+</div>
+{% endblock %}

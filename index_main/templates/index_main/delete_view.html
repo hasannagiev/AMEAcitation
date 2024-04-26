@@ -1,0 +1,11 @@
+{% extends 'index_main/wrapper.html'%}
+{% block title%}Xəbərlərin silinməsi {% endblock%}
+{% block content%}
+    <div class="features">
+        <h1>Xəbərlərin silinməsi</h1>
+        <form method="post">
+        {% csrf_token %}
+        <button class="btn btn-success" type="submit"> Saxla </button>
+        </form>
+    </div>
+{% endblock %}

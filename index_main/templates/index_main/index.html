@@ -1,0 +1,16 @@
+{% extends 'index_main/wrapper.html'%}
+{% block title %} Xəbərlər {% endblock %}
+{% block content%}
+        <div class="features">
+                <h1>Xəbərlər</h1>
+                {% for el in t %}
+                    <div class="alert alert-warning">
+                        <h3>{{ el.title }}</h3>
+                        <p>{{ el.anons }}</p>
+                        <h5>{{ el.date }}</h5>
+                    <a href="{% url 'details_view' el.id %}">
+                            <button type="button" class="btn btn-warning" >Ardını oxu</button></a>
+                    </div>
+                {% endfor %}
+        </div>
+{% endblock%}
